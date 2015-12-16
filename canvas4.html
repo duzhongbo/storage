@@ -29,9 +29,19 @@ window.onload=function(){
 		var y = 200;
 		var r = 150;
 
-		oGC.moveTo(x,y);
+		// oGC.moveTo(x,y);
 
-		oGC.arc(x,y,r,0,6*Math.PI/180,false);
+		// oGC.arc(x,y,r,0,6*Math.PI/180,false);// 满圈360°，60格子，一格6°
+
+		oGC.beginPath();
+
+		for(var i=0;i<60;i++){
+			oGC.moveTo(x,y);
+			oGC.arc(x,y,r,6*i*Math.PI/180,6*(i+1)*Math.PI/180,false);
+		}
+
+		oGC.closePath();
+
 		oGC.stroke();
 	}
 	toDraw()
