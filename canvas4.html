@@ -24,11 +24,18 @@ span{color: #fff;}
 window.onload=function(){
 	var oGC = c1.getContext('2d');
 	
-	oGC.moveTo(120,120);// 启事标记点
-	oGC.arc(120,120,100,0,90*Math.PI/180,false);//弧度标记
-	oGC.stroke();
-}
+	function toDraw(){
+		var x = 200;
+		var y = 200;
+		var r = 150;
 
+		oGC.moveTo(x,y);
+
+		oGC.arc(x,y,r,0,6*Math.PI/180,false);
+		oGC.stroke();
+	}
+	toDraw()
+}
 </script>
 
 </body>
