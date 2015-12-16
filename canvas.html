@@ -22,14 +22,21 @@ span{color: #fff;}
 <script type="text/javascript">
 window.onload=function(){
 	var oGC = c1.getContext('2d');
-	oGC.fillStyle='red';
-	oGC.strokeStyle='blue';
-	oGC.lineWidth=10;
-	// oGC.lineJoin = 'round';
-	oGC.lineJoin = 'bevel';
+	// oGC.fillStyle='red';
+	// oGC.strokeStyle='blue';
+	// oGC.lineWidth=10;
+	// // oGC.lineJoin = 'round';
+	// oGC.lineJoin = 'bevel';
 	
-	oGC.fillRect(50,50,100,100);
-	oGC.strokeRect(50.5,50.5,100,100);
+	// oGC.fillRect(50,50,100,100);
+	// oGC.strokeRect(50.5,50.5,100,100);
+
+
+	// 路径绘制
+	oGC.beginPath();
+	oGC.moveTo(100,100);// 起始点
+	oGC.lineTo(200,200);// 
+	oGC.stroke();
 	
 }
 
