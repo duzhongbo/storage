@@ -32,7 +32,7 @@ window.onload=function(){
 		// oGC.moveTo(x,y);
 
 		// oGC.arc(x,y,r,0,6*Math.PI/180,false);// 满圈360°，60格子，一格6°
-
+		// 绘制表盘
 		oGC.beginPath();
 
 		for(var i=0;i<60;i++){
@@ -44,11 +44,26 @@ window.onload=function(){
 
 		oGC.stroke();
 
+		// 绘制小圆填充，产生分针效果
 		oGC.fillStyle='white';
 		oGC.beginPath();
 		oGC.arc(x,y,r*19/20,0,6*(i+1)*Math.PI/180,false);
 		oGC.closePath();
 		oGC.fill();
+
+		// 绘制时针
+		oGC.lineWidth=3;
+		oGC.beginPath();
+
+		for(var i=0;i<12;i++){
+			oGC.moveTo(x,y);
+			oGC.arc(x,y,r,30*i*Math.PI/180,30*(i+1)*Math.PI/180,false);
+		}
+
+		oGC.closePath();
+
+		oGC.stroke();
+
 
 	}
 	toDraw()
