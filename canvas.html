@@ -31,6 +31,8 @@ window.onload=function(){
 	// oGC.fillRect(50,50,100,100);
 	// oGC.strokeRect(50.5,50.5,100,100);
 
+	oGC.save();
+
 	oGC.fillStyle='red';// 红色的填充作用到了下面所有的绘制中(除了路径绘画)
 	// 路径绘制
 	oGC.beginPath(); // 和closePath对应闭合绘画区间
@@ -38,7 +40,9 @@ window.onload=function(){
 	oGC.lineTo(200,200);// 
 	oGC.lineTo(300,200);// 
 	oGC.closePath();
-	oGC.stroke();
+	// oGC.stroke();
+	oGC.fill();
+	oGC.restore();
 
 	oGC.beginPath();
 	oGC.moveTo(100,200);// 起始点
