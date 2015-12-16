@@ -21,11 +21,13 @@ window.onload=function(){
 
 		// sessionStorage 临时性存储,页面关闭存储消失，数据页面之间相互独立，不共享
 		// localStorage 永久性存储,
-		window.sessionStorage.setItem('name',oInput[3].value);
+		// window.sessionStorage.setItem('name',oInput[3].value);
+		window.localStorage.setItem('name',oInput[3].value);
 
 	}
 	oInput[1].onclick=function(){
-		alert(window.sessionStorage.getItem('name'));
+		// alert(window.sessionStorage.getItem('name'));
+		alert(window.localStorage.getItem('name'));
 	}
 }
 
