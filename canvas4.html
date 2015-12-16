@@ -47,6 +47,7 @@ window.onload=function(){
 		// 绘制小圆填充，产生分针效果
 		oGC.fillStyle='white';
 		oGC.beginPath();
+		oGC.moveTo(x,y);
 		oGC.arc(x,y,r*19/20,0,6*(i+1)*Math.PI/180,false);
 		oGC.closePath();
 		oGC.fill();
@@ -63,6 +64,15 @@ window.onload=function(){
 		oGC.closePath();
 
 		oGC.stroke();
+
+
+		// 绘制小圆填充，产生时针效果
+		oGC.fillStyle='white';
+		oGC.beginPath();
+		oGC.moveTo(x,y);
+		oGC.arc(x,y,r*18/20,0,6*(i+1)*Math.PI/180,false);
+		oGC.closePath();
+		oGC.fill();
 
 
 	}
